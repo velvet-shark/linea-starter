@@ -17,7 +17,7 @@ export default function Home() {
 
           <div className="text-center">
             <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white sm:text-6xl md:text-7xl">
-              Linea Starter Template
+              ContribuThor: Linea Starter Template
             </h1>
           </div>
 
