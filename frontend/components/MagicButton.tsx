@@ -19,10 +19,12 @@ const MagicButton = () => {
   });
   const contractAbi = abi.abi as Abi;
 
+  // Set the current URL when the component mounts
   useEffect(() => {
     setCurrentUrl(window.location.href);
   }, []);
 
+  // Read the total amount contributed for the current URL
   const { data: urlAmount, error: readError } = useReadContract({
     abi: contractAbi,
     address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`,
@@ -30,12 +32,14 @@ const MagicButton = () => {
     args: [currentUrl]
   });
 
+  // Update the total contributed amount when urlAmount changes
   useEffect(() => {
     if (urlAmount && typeof urlAmount === "bigint") {
       setTotalContributed(formatEther(urlAmount));
     }
   }, [urlAmount]);
 
+  // Handle the payment process
   const handlePay = async () => {
     if (!isConnected) {
       await connect({ connector: connectors[0] });

@@ -1,4 +1,4 @@
-# ContribuThor dApp
+# Linea Starter dApp
 
 ## Overview
 
