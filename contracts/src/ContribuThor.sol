@@ -10,7 +10,7 @@ contract ContribuThor {
     address public owner;
 
     // Mapping to track total payments for each page URL
-    mapping(string pageUrl => uint256 totalAmount) public urlAmounts;
+    mapping(string pageUrl => uint256 totalAmount) private urlAmounts;
 
     // Event emitted when a payment is received
     event PaymentReceived(
@@ -33,6 +33,13 @@ contract ContribuThor {
 
         urlAmounts[pageUrl] += msg.value;
         emit PaymentReceived(msg.sender, msg.value, pageUrl);
+    }
+
+    /// @notice Retrieves the total amount contributed for a specific page URL
+    /// @param pageUrl The URL of the page to check
+    /// @return The total amount contributed for the given page URL
+    function getUrlAmount(string memory pageUrl) public view returns (uint256) {
+        return urlAmounts[pageUrl];
     }
 
     /// @notice Allows the owner to withdraw all funds from the contract

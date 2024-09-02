@@ -1,5 +1,5 @@
 import { http, createConfig } from "wagmi";
-import { linea } from "wagmi/chains";
+import { lineaSepolia, localhost } from "wagmi/chains";
 import { metaMask } from "@wagmi/connectors";
 
 const MetaMaskOptions = {
@@ -10,10 +10,11 @@ const MetaMaskOptions = {
 };
 
 export const config = createConfig({
-  chains: [linea],
+  chains: [lineaSepolia, localhost],
   connectors: [metaMask(MetaMaskOptions)],
   ssr: true,
   transports: {
-    [linea.id]: http()
+    [lineaSepolia.id]: http(),
+    [localhost.id]: http()
   }
 });
