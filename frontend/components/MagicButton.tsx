@@ -1,6 +1,8 @@
 import { useAccount, useConnect, useWriteContract, useWaitForTransactionReceipt, useReadContract } from "wagmi";
 import { Abi, parseEther, formatEther } from "viem";
-import abi from "../../contracts/out/ContribuThor.sol/ContribuThor.json";
+// import abi from "../../contracts/out/ContribuThor.sol/ContribuThor.json"; // The original location
+import abi from "../lib/ContribuThor.json"; // Copied from contracts/out/ContribuThor.sol/ContribuThor.json, to be able to deploy with Vercel
+
 import { useEffect, useState } from "react";
 
 const MagicButton = () => {

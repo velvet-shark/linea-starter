@@ -1,0 +1,172 @@
+{
+  "abi": [
+    { "type": "constructor", "inputs": [], "stateMutability": "nonpayable" },
+    { "type": "fallback", "stateMutability": "payable" },
+    { "type": "receive", "stateMutability": "payable" },
+    {
+      "type": "function",
+      "name": "MINIMUM_AMOUNT",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getUrlAmount",
+      "inputs": [{ "name": "pageUrl", "type": "string", "internalType": "string" }],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "owner",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "pay",
+      "inputs": [{ "name": "pageUrl", "type": "string", "internalType": "string" }],
+      "outputs": [],
+      "stateMutability": "payable"
+    },
+    { "type": "function", "name": "withdraw", "inputs": [], "outputs": [], "stateMutability": "nonpayable" },
+    {
+      "type": "event",
+      "name": "PaymentReceived",
+      "inputs": [
+        { "name": "payer", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "amount", "type": "uint256", "indexed": false, "internalType": "uint256" },
+        { "name": "pageUrl", "type": "string", "indexed": false, "internalType": "string" }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Withdrawal",
+      "inputs": [
+        { "name": "owner", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "amount", "type": "uint256", "indexed": false, "internalType": "uint256" }
+      ],
+      "anonymous": false
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600080546001600160a01b031916331790556104de806100326000396000f3fe60806040526004361061004e5760003560e01c8063257d9bb81461008c5780632b66d72e146100ba5780633ccfd60b146100cf5780638c390f6f146100e45780638da5cb5b1461010457610074565b366100745760405162461bcd60e51b815260040161006b906102fb565b60405180910390fd5b60405162461bcd60e51b815260040161006b906102fb565b34801561009857600080fd5b506100a766038d7ea4c6800081565b6040519081526020015b60405180910390f35b6100cd6100c8366004610356565b61013c565b005b3480156100db57600080fd5b506100cd6101fe565b3480156100f057600080fd5b506100a76100ff366004610356565b6102d3565b34801561011057600080fd5b50600054610124906001600160a01b031681565b6040516001600160a01b0390911681526020016100b1565b66038d7ea4c6800034101561018c5760405162461bcd60e51b81526020600482015260166024820152755061796d656e7420616d6f756e7420746f6f206c6f7760501b604482015260640161006b565b3460018260405161019d919061042b565b908152602001604051809103902060008282546101ba9190610447565b909155505060405133907f8dfc1109af223bb7f4e48f38a8a7631f492f0106b90747a651bf181b0fc4e402906101f3903490859061046e565b60405180910390a250565b6000546001600160a01b031633146102585760405162461bcd60e51b815260206004820152601760248201527f4f6e6c79206f776e65722063616e207769746864726177000000000000000000604482015260640161006b565b6000805460405147926001600160a01b039092169183156108fc02918491818181858888f19350505050158015610293573d6000803e3d6000fd5b506000546040518281526001600160a01b03909116907f7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65906020016101f3565b60006001826040516102e5919061042b565b9081526020016040518091039020549050919050565b60208082526025908201527f55736520746865207061792066756e6374696f6e20746f206d616b65207061796040820152646d656e747360d81b606082015260800190565b634e487b7160e01b600052604160045260246000fd5b60006020828403121561036857600080fd5b813567ffffffffffffffff8082111561038057600080fd5b818401915084601f83011261039457600080fd5b8135818111156103a6576103a6610340565b604051601f8201601f19908116603f011681019083821181831017156103ce576103ce610340565b816040528281528760208487010111156103e757600080fd5b826020860160208301376000928101602001929092525095945050505050565b60005b8381101561042257818101518382015260200161040a565b50506000910152565b6000825161043d818460208701610407565b9190910192915050565b8082018082111561046857634e487b7160e01b600052601160045260246000fd5b92915050565b8281526040602082015260008251806040840152610493816060850160208701610407565b601f01601f191691909101606001939250505056fea2646970667358221220bb48b923a6b7d4d8f347543788f9508e3215c1658d1aa4ecd968e3eea87c832464736f6c63430008160033",
+    "sourceMap": "154:2041:20:-:0;;;809:49;;;;;;;;;-1:-1:-1;833:5:20;:18;;-1:-1:-1;;;;;;833:18:20;841:10;833:18;;;154:2041;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x60806040526004361061004e5760003560e01c8063257d9bb81461008c5780632b66d72e146100ba5780633ccfd60b146100cf5780638c390f6f146100e45780638da5cb5b1461010457610074565b366100745760405162461bcd60e51b815260040161006b906102fb565b60405180910390fd5b60405162461bcd60e51b815260040161006b906102fb565b34801561009857600080fd5b506100a766038d7ea4c6800081565b6040519081526020015b60405180910390f35b6100cd6100c8366004610356565b61013c565b005b3480156100db57600080fd5b506100cd6101fe565b3480156100f057600080fd5b506100a76100ff366004610356565b6102d3565b34801561011057600080fd5b50600054610124906001600160a01b031681565b6040516001600160a01b0390911681526020016100b1565b66038d7ea4c6800034101561018c5760405162461bcd60e51b81526020600482015260166024820152755061796d656e7420616d6f756e7420746f6f206c6f7760501b604482015260640161006b565b3460018260405161019d919061042b565b908152602001604051809103902060008282546101ba9190610447565b909155505060405133907f8dfc1109af223bb7f4e48f38a8a7631f492f0106b90747a651bf181b0fc4e402906101f3903490859061046e565b60405180910390a250565b6000546001600160a01b031633146102585760405162461bcd60e51b815260206004820152601760248201527f4f6e6c79206f776e65722063616e207769746864726177000000000000000000604482015260640161006b565b6000805460405147926001600160a01b039092169183156108fc02918491818181858888f19350505050158015610293573d6000803e3d6000fd5b506000546040518281526001600160a01b03909116907f7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65906020016101f3565b60006001826040516102e5919061042b565b9081526020016040518091039020549050919050565b60208082526025908201527f55736520746865207061792066756e6374696f6e20746f206d616b65207061796040820152646d656e747360d81b606082015260800190565b634e487b7160e01b600052604160045260246000fd5b60006020828403121561036857600080fd5b813567ffffffffffffffff8082111561038057600080fd5b818401915084601f83011261039457600080fd5b8135818111156103a6576103a6610340565b604051601f8201601f19908116603f011681019083821181831017156103ce576103ce610340565b816040528281528760208487010111156103e757600080fd5b826020860160208301376000928101602001929092525095945050505050565b60005b8381101561042257818101518382015260200161040a565b50506000910152565b6000825161043d818460208701610407565b9190910192915050565b8082018082111561046857634e487b7160e01b600052601160045260246000fd5b92915050565b8281526040602082015260008251806040840152610493816060850160208701610407565b601f01601f191691909101606001939250505056fea2646970667358221220bb48b923a6b7d4d8f347543788f9508e3215c1658d1aa4ecd968e3eea87c832464736f6c63430008160033",
+    "sourceMap": "154:2041:20:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1968:47;;-1:-1:-1;;;1968:47:20;;;;;;;:::i;:::-;;;;;;;;154:2041;2139:47;;-1:-1:-1;;;2139:47:20;;;;;;;:::i;221:52::-;;;;;;;;;;;;262:11;221:52;;;;;566:25:21;;;554:2;539:18;221:52:20;;;;;;;;992:237;;;;;;:::i;:::-;;:::i;:::-;;1631:234;;;;;;;;;;;;;:::i;1434:118::-;;;;;;;;;;-1:-1:-1;1434:118:20;;;;;:::i;:::-;;:::i;316:20::-;;;;;;;;;;-1:-1:-1;316:20:20;;;;-1:-1:-1;;;;;316:20:20;;;;;;-1:-1:-1;;;;;1825:32:21;;;1807:51;;1795:2;1780:18;316:20:20;1661:203:21;992:237:20;262:11;1063:9;:27;;1055:62;;;;-1:-1:-1;;;1055:62:20;;2071:2:21;1055:62:20;;;2053:21:21;2110:2;2090:18;;;2083:30;-1:-1:-1;;;2129:18:21;;;2122:52;2191:18;;1055:62:20;1869:346:21;1055:62:20;1151:9;1128:10;1139:7;1128:19;;;;;;:::i;:::-;;;;;;;;;;;;;;:32;;;;;;;:::i;:::-;;;;-1:-1:-1;;1175:47:20;;1191:10;;1175:47;;;;1203:9;;1214:7;;1175:47;:::i;:::-;;;;;;;;992:237;:::o;1631:234::-;1692:5;;-1:-1:-1;;;;;1692:5:20;1678:10;:19;1670:55;;;;-1:-1:-1;;;1670:55:20;;3670:2:21;1670:55:20;;;3652:21:21;3709:2;3689:18;;;3682:30;3748:25;3728:18;;;3721:53;3791:18;;1670:55:20;3468:347:21;1670:55:20;1736:15;1793:5;;1785:32;;1754:21;;-1:-1:-1;;;;;1793:5:20;;;;1785:32;;;;;1754:21;;1785:32;1736:15;1785:32;1754:21;1793:5;1785:32;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1843:5:20;;1832:26;;566:25:21;;;-1:-1:-1;;;;;1843:5:20;;;;1832:26;;554:2:21;539:18;1832:26:20;420:177:21;1434:118:20;1500:7;1526:10;1537:7;1526:19;;;;;;:::i;:::-;;;;;;;;;;;;;;1519:26;;1434:118;;;:::o;14:401:21:-;216:2;198:21;;;255:2;235:18;;;228:30;294:34;289:2;274:18;;267:62;-1:-1:-1;;;360:2:21;345:18;;338:35;405:3;390:19;;14:401::o;602:127::-;663:10;658:3;654:20;651:1;644:31;694:4;691:1;684:15;718:4;715:1;708:15;734:922;803:6;856:2;844:9;835:7;831:23;827:32;824:52;;;872:1;869;862:12;824:52;912:9;899:23;941:18;982:2;974:6;971:14;968:34;;;998:1;995;988:12;968:34;1036:6;1025:9;1021:22;1011:32;;1081:7;1074:4;1070:2;1066:13;1062:27;1052:55;;1103:1;1100;1093:12;1052:55;1139:2;1126:16;1161:2;1157;1154:10;1151:36;;;1167:18;;:::i;:::-;1242:2;1236:9;1210:2;1296:13;;-1:-1:-1;;1292:22:21;;;1316:2;1288:31;1284:40;1272:53;;;1340:18;;;1360:22;;;1337:46;1334:72;;;1386:18;;:::i;:::-;1426:10;1422:2;1415:22;1461:2;1453:6;1446:18;1501:7;1496:2;1491;1487;1483:11;1479:20;1476:33;1473:53;;;1522:1;1519;1512:12;1473:53;1578:2;1573;1569;1565:11;1560:2;1552:6;1548:15;1535:46;1623:1;1601:15;;;1618:2;1597:24;1590:35;;;;-1:-1:-1;1605:6:21;734:922;-1:-1:-1;;;;;734:922:21:o;2220:250::-;2305:1;2315:113;2329:6;2326:1;2323:13;2315:113;;;2405:11;;;2399:18;2386:11;;;2379:39;2351:2;2344:10;2315:113;;;-1:-1:-1;;2462:1:21;2444:16;;2437:27;2220:250::o;2475:289::-;2606:3;2644:6;2638:13;2660:66;2719:6;2714:3;2707:4;2699:6;2695:17;2660:66;:::i;:::-;2742:16;;;;;2475:289;-1:-1:-1;;2475:289:21:o;2769:222::-;2834:9;;;2855:10;;;2852:133;;;2907:10;2902:3;2898:20;2895:1;2888:31;2942:4;2939:1;2932:15;2970:4;2967:1;2960:15;2852:133;2769:222;;;;:::o;2996:467::-;3173:6;3162:9;3155:25;3216:2;3211;3200:9;3196:18;3189:30;3136:4;3248:6;3242:13;3291:6;3286:2;3275:9;3271:18;3264:34;3307:79;3379:6;3374:2;3363:9;3359:18;3354:2;3346:6;3342:15;3307:79;:::i;:::-;3447:2;3426:15;-1:-1:-1;;3422:29:21;3407:45;;;;3454:2;3403:54;;2996:467;-1:-1:-1;;;2996:467:21:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "MINIMUM_AMOUNT()": "257d9bb8",
+    "getUrlAmount(string)": "8c390f6f",
+    "owner()": "8da5cb5b",
+    "pay(string)": "2b66d72e",
+    "withdraw()": "3ccfd60b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.22+commit.4fc1097e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"payer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"pageUrl\",\"type\":\"string\"}],\"name\":\"PaymentReceived\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdrawal\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"MINIMUM_AMOUNT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"pageUrl\",\"type\":\"string\"}],\"name\":\"getUrlAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"pageUrl\",\"type\":\"string\"}],\"name\":\"pay\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getUrlAmount(string)\":{\"params\":{\"pageUrl\":\"The URL of the page to check\"},\"returns\":{\"_0\":\"The total amount contributed for the given page URL\"}},\"pay(string)\":{\"params\":{\"pageUrl\":\"The URL of the page being paid for\"}}},\"title\":\"ContribuThor\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Sets the contract deployer as the owner\"},\"getUrlAmount(string)\":{\"notice\":\"Retrieves the total amount contributed for a specific page URL\"},\"pay(string)\":{\"notice\":\"Allows users to make payments for a specific page URL\"},\"withdraw()\":{\"notice\":\"Allows the owner to withdraw all funds from the contract\"}},\"notice\":\"A contract for receiving and tracking payments for web pages\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/ContribuThor.sol\":\"ContribuThor\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/ContribuThor.sol\":{\"keccak256\":\"0x40f2a952baa1a84c799906e92dce584a59904f6714e342fc242123b44ff54622\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9c6d8dfc2e5f5c49866ef70919077042c4dffe908881b2f2e70cb46596e50b70\",\"dweb:/ipfs/QmNjfxFFeshJzwUaRxizKKZbDP7STYajc7nuebKP4NXNnL\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": { "version": "0.8.22+commit.4fc1097e" },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "payer", "type": "address", "indexed": true },
+            { "internalType": "uint256", "name": "amount", "type": "uint256", "indexed": false },
+            { "internalType": "string", "name": "pageUrl", "type": "string", "indexed": false }
+          ],
+          "type": "event",
+          "name": "PaymentReceived",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "owner", "type": "address", "indexed": true },
+            { "internalType": "uint256", "name": "amount", "type": "uint256", "indexed": false }
+          ],
+          "type": "event",
+          "name": "Withdrawal",
+          "anonymous": false
+        },
+        { "inputs": [], "stateMutability": "payable", "type": "fallback" },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "MINIMUM_AMOUNT",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }]
+        },
+        {
+          "inputs": [{ "internalType": "string", "name": "pageUrl", "type": "string" }],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getUrlAmount",
+          "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [{ "internalType": "address", "name": "", "type": "address" }]
+        },
+        {
+          "inputs": [{ "internalType": "string", "name": "pageUrl", "type": "string" }],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "pay"
+        },
+        { "inputs": [], "stateMutability": "nonpayable", "type": "function", "name": "withdraw" },
+        { "inputs": [], "stateMutability": "payable", "type": "receive" }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getUrlAmount(string)": {
+            "params": { "pageUrl": "The URL of the page to check" },
+            "returns": { "_0": "The total amount contributed for the given page URL" }
+          },
+          "pay(string)": { "params": { "pageUrl": "The URL of the page being paid for" } }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "constructor": { "notice": "Sets the contract deployer as the owner" },
+          "getUrlAmount(string)": { "notice": "Retrieves the total amount contributed for a specific page URL" },
+          "pay(string)": { "notice": "Allows users to make payments for a specific page URL" },
+          "withdraw()": { "notice": "Allows the owner to withdraw all funds from the contract" }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": ["forge-std/=lib/forge-std/src/"],
+      "optimizer": { "enabled": true, "runs": 200 },
+      "metadata": { "bytecodeHash": "ipfs" },
+      "compilationTarget": { "src/ContribuThor.sol": "ContribuThor" },
+      "evmVersion": "paris",
+      "libraries": {}
+    },
+    "sources": {
+      "src/ContribuThor.sol": {
+        "keccak256": "0x40f2a952baa1a84c799906e92dce584a59904f6714e342fc242123b44ff54622",
+        "urls": [
+          "bzz-raw://9c6d8dfc2e5f5c49866ef70919077042c4dffe908881b2f2e70cb46596e50b70",
+          "dweb:/ipfs/QmNjfxFFeshJzwUaRxizKKZbDP7STYajc7nuebKP4NXNnL"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "id": 20
+}
