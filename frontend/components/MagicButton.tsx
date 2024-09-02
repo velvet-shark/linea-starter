@@ -31,7 +31,6 @@ const MagicButton = () => {
   useEffect(() => {
     if (urlAmount && typeof urlAmount === "bigint") {
       setTotalContributed(formatEther(urlAmount));
-      console.log("Total contributed:", formatEther(urlAmount));
     }
   }, [urlAmount]);
 
@@ -39,7 +38,6 @@ const MagicButton = () => {
     if (!isConnected) {
       await connect({ connector: connectors[0] });
     } else {
-      console.log("currentUrl", currentUrl);
       writeContract({
         abi: contractAbi,
         address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`,
